@@ -9,7 +9,7 @@
         :id="tour.id"
       />
     </b-row>
-    <div v-else class="my-3">
+    <div v-else class="py-5">
       <b-row align-h="center">
         <b-icon-exclamation-diamond
           class="text-info"
@@ -17,7 +17,7 @@
         >
         </b-icon-exclamation-diamond>
       </b-row>
-      <h3 class="my-2">
+      <h3 class="my-3">
         No tours found with that criteria. Please try different search
       </h3>
     </div>
@@ -28,18 +28,18 @@
         :per-page="perPage"
         @input="paginate(currentPage)"
       >
-        <template v-slot:first-text
-          ><span class="text-info">First</span></template
-        >
-        <template v-slot:prev-text
-          ><span class="text-info">Prev</span></template
-        >
-        <template v-slot:next-text
-          ><span class="text-info">Next</span></template
-        >
-        <template v-slot:last-text
-          ><span class="text-info">Last</span></template
-        >
+        <template v-slot:first-text>
+          <span class="text-info">First</span>
+        </template>
+        <template v-slot:prev-text>
+          <span class="text-info">Prev</span>
+        </template>
+        <template v-slot:next-text>
+          <span class="text-info">Next</span>
+        </template>
+        <template v-slot:last-text>
+          <span class="text-info">Last</span>
+        </template>
       </b-pagination>
     </b-row>
   </b-container>
